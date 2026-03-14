@@ -168,7 +168,7 @@ async function init(token) {
 
                 await interaction.editReply({ embeds: [embed] });
 
-                const collector = interaction.channel.createMessageCollector({ time: 30000 });
+                const collector = interaction.channel.createMessageCollector({ filter: m => !m.author.bot, time: 30000 });
 
                 collector.on('collect', async m => {
                     const userContent = m.content.toLowerCase().trim().replace(/^[!/]/, '');
@@ -244,7 +244,7 @@ async function init(token) {
 
                 await interaction.editReply({ embeds: [embed] });
 
-                const collector = interaction.channel.createMessageCollector({ time: 30000 });
+                const collector = interaction.channel.createMessageCollector({ filter: m => !m.author.bot, time: 30000 });
 
                 collector.on('collect', m => {
                     const userContent = m.content.toLowerCase().trim().replace(/^[!/]/, '');
@@ -340,7 +340,7 @@ async function init(token) {
 
                 await interaction.editReply({ embeds: [embed] });
 
-                const collector = interaction.channel.createMessageCollector({ time: 30000 });
+                const collector = interaction.channel.createMessageCollector({ filter: m => !m.author.bot, time: 30000 });
 
                 collector.on('collect', m => {
                     const userContent = m.content.toLowerCase().trim().replace(/^[!/]/, '');
@@ -419,7 +419,7 @@ async function init(token) {
 
                 await interaction.editReply({ embeds: [embed] });
 
-                const collector = interaction.channel.createMessageCollector({ time: 30000 });
+                const collector = interaction.channel.createMessageCollector({ filter: m => !m.author.bot, time: 30000 });
 
                 collector.on('collect', m => {
                     const userContent = m.content.toLowerCase().trim().replace(/^[!/]/, '');
